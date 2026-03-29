@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://crw2b3owvqbq1"]
+
+[node name="WinScreen" type="Node2D" unique_id=191565326]
+
+[node name="Label" type="Label" parent="." unique_id=169712177]
+offset_left = 484.0
+offset_top = 256.0
+offset_right = 628.0
+offset_bottom = 295.0
+theme_type_variation = &"HeaderLarge"
+text = "YOU WON!"

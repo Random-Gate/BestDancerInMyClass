@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cn6erht3fbs08"]
+
+[ext_resource type="Script" uid="uid://4q0k2862wnyi" path="res://Scripts/capturure.gd" id="1_hl57f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o6rqx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hl57f"]
+
+[node name="Capturure" type="Area3D" unique_id=966583844]
+script = ExtResource("1_hl57f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2024624347]
+mesh = SubResource("BoxMesh_o6rqx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1799231975]
+shape = SubResource("BoxShape3D_hl57f")

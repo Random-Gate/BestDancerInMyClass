@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8e3j6xyg5sl2"]
+
+[ext_resource type="Script" uid="uid://dnxy4ij0f80e8" path="res://Scripts/beat_spawner.gd" id="1_00uph"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00uph"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_hptdt"]
+material = SubResource("StandardMaterial3D_00uph")
+
+[node name="BeatSpawner" type="Node3D" unique_id=503372501]
+script = ExtResource("1_00uph")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=542880871]
+mesh = SubResource("SphereMesh_hptdt")
+
+[node name="Timer" type="Timer" parent="." unique_id=1114361938]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://47sw52ltucn8"]
+
+[ext_resource type="Script" uid="uid://b88sqlpk1jn2w" path="res://Scripts/options_manager.gd" id="1_prnvy"]
+
+[node name="Options" type="Node2D" unique_id=1684551644]
+
+[node name="OptionsManager" type="Control" parent="." unique_id=1423679233]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_prnvy")
+
+[node name="Back" type="Button" parent="OptionsManager" unique_id=1370080337]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 305.0
+offset_right = 662.0
+offset_bottom = 351.0
+text = "عودة"
+
+[connection signal="pressed" from="OptionsManager/Back" to="OptionsManager" method="_on_back_pressed"]

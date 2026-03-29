@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://db3lac3asiio4"]
+
+[ext_resource type="Script" uid="uid://b81aul8hbj11p" path="res://Scripts/boxrure.gd" id="1_nrg03"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t5u72"]
+size = Vector3(0.5, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka8bg"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dbmtx"]
+material = SubResource("StandardMaterial3D_ka8bg")
+size = Vector3(1, 0.3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrg03"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_ki423"]
+
+[node name="Boxrure" type="Area3D" unique_id=1528244298]
+script = ExtResource("1_nrg03")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1651003494]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_t5u72")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=128971453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.155478, 0, 0)
+mesh = SubResource("BoxMesh_dbmtx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=907038769]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.7385216, 0, 0)
+material_override = SubResource("StandardMaterial3D_nrg03")
+mesh = SubResource("PrismMesh_ki423")

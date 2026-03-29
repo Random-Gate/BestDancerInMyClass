@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dtsddi58iq4qi"]
+
+[ext_resource type="PackedScene" uid="uid://cn6erht3fbs08" path="res://Scenes/capturure.tscn" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://bmb00x3v7crjd" path="res://Scenes/boxrure.tscn" id="2_wrm1d"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3dryh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_wowpa"]
+sky_material = SubResource("ProceduralSkyMaterial_3dryh")
+
+[sub_resource type="Environment" id="Environment_i6g32"]
+background_mode = 2
+sky = SubResource("Sky_wowpa")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="MASTER" type="Node3D" unique_id=2084834195]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=678050489]
+environment = SubResource("Environment_i6g32")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2048413760]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1230598520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.481576)
+
+[node name="Capturure" parent="." unique_id=82933649 instance=ExtResource("1_qxrlw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Node3D" parent="." unique_id=273111708 instance=ExtResource("2_wrm1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.448023, 0, 0)

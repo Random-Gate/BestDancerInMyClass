@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://btblrx3qtikx5"]
+
+[ext_resource type="Script" uid="uid://b8v3hlgdc5qvs" path="res://Scripts/menu_manager.gd" id="1_1rerr"]
+
+[node name="Menu" type="Node2D" unique_id=55446581]
+
+[node name="MenuManager" type="Control" parent="." unique_id=792010856]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1rerr")
+
+[node name="Start" type="Button" parent="MenuManager" unique_id=1456032333]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 246.0
+offset_right = 663.0
+offset_bottom = 291.0
+text = "ابدأ"
+
+[node name="Options" type="Button" parent="MenuManager" unique_id=846098157]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 296.0
+offset_right = 663.0
+offset_bottom = 340.0
+text = "إعدادات"
+
+[node name="Quit" type="Button" parent="MenuManager" unique_id=1882109595]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 347.0
+offset_right = 665.0
+offset_bottom = 391.0
+text = "خروج"
+
+[connection signal="pressed" from="MenuManager/Start" to="MenuManager" method="_on_start_pressed"]
+[connection signal="pressed" from="MenuManager/Options" to="MenuManager" method="_on_options_pressed"]
+[connection signal="pressed" from="MenuManager/Quit" to="MenuManager" method="_on_quit_pressed"]
