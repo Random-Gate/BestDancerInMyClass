@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://f318mf7k3u2o" path="res://Scripts/MainScripts/ScoreCalculator.gd" id="1_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://cn6erht3fbs08" path="res://Scenes/Objects/capturure.tscn" id="1_qxrlw"]
 [ext_resource type="Script" uid="uid://bj33iry0001s" path="res://Scripts/MainScripts/GameMaster.gd" id="1_xrri0"]
-[ext_resource type="PackedScene" uid="uid://bmb00x3v7crjd" path="res://Scenes/Beats/boxrureUp.tscn" id="5_gmw7w"]
 [ext_resource type="PackedScene" uid="uid://8e3j6xyg5sl2" path="res://Scenes/Objects/beat_spawner.tscn" id="6_i6g32"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3dryh"]
@@ -43,10 +42,7 @@ text = "Score: "
 script = ExtResource("1_1l0tm")
 
 [node name="BeatSpawner" parent="." unique_id=503372501 instance=ExtResource("6_i6g32")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
 
 [node name="Capturure" parent="." unique_id=966583844 instance=ExtResource("1_qxrlw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
-
-[node name="Boxrure" parent="." unique_id=1528244298 instance=ExtResource("5_gmw7w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)

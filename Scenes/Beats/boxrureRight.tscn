@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://db3lac3asiio4"]
 
-[ext_resource type="Script" uid="uid://b81aul8hbj11p" path="res://Scripts/boxrure.gd" id="1_nrg03"]
+[ext_resource type="Script" uid="uid://coedmnvqdl5y3" path="res://Scripts/Beats/scr_right.gd" id="1_rbbph"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5u72"]
 size = Vector3(0.5, 1, 1)
@@ -18,7 +18,7 @@ albedo_color = Color(0, 1, 0, 1)
 [sub_resource type="PrismMesh" id="PrismMesh_ki423"]
 
 [node name="Boxrure" type="Area3D" unique_id=1528244298]
-script = ExtResource("1_nrg03")
+script = ExtResource("1_rbbph")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1651003494]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
