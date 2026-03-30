@@ -1,12 +1,11 @@
-extends Area3D
+extends Node3D
 
-var moveSpeed = 8
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Engine.max_fps = 60
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x = position.x - moveSpeed * delta
+	pass

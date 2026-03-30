@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btblrx3qtikx5"]
 
-[ext_resource type="Script" uid="uid://b8v3hlgdc5qvs" path="res://Scripts/menu_manager.gd" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://b8v3hlgdc5qvs" path="res://Scripts/MainScripts/menu_manager.gd" id="1_750li"]
 
 [node name="Menu" type="Node2D" unique_id=55446581]
 
@@ -9,7 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_1rerr")
+script = ExtResource("1_750li")
 
 [node name="Start" type="Button" parent="MenuManager" unique_id=1456032333]
 layout_mode = 0

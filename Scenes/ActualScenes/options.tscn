@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://47sw52ltucn8"]
 
-[ext_resource type="Script" uid="uid://b88sqlpk1jn2w" path="res://Scripts/options_manager.gd" id="1_prnvy"]
+[ext_resource type="Script" uid="uid://b88sqlpk1jn2w" path="res://Scripts/MainScripts/options_manager.gd" id="1_prnvy"]
 
 [node name="Options" type="Node2D" unique_id=1684551644]
 

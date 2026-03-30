@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dtsddi58iq4qi"]
+
+[ext_resource type="Script" uid="uid://f318mf7k3u2o" path="res://Scripts/MainScripts/ScoreCalculator.gd" id="1_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://cn6erht3fbs08" path="res://Scenes/Objects/capturure.tscn" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://bj33iry0001s" path="res://Scripts/MainScripts/GameMaster.gd" id="1_xrri0"]
+[ext_resource type="PackedScene" uid="uid://8e3j6xyg5sl2" path="res://Scenes/Objects/beat_spawner.tscn" id="6_i6g32"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3dryh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_wowpa"]
+sky_material = SubResource("ProceduralSkyMaterial_3dryh")
+
+[sub_resource type="Environment" id="Environment_i6g32"]
+background_mode = 2
+sky = SubResource("Sky_wowpa")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="MASTER" type="Node3D" unique_id=2084834195]
+script = ExtResource("1_xrri0")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=678050489]
+environment = SubResource("Environment_i6g32")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2048413760]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1230598520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.731689)
+projection = 1
+size = 18.757
+
+[node name="Label" type="Label" parent="Camera3D" unique_id=1777334689]
+offset_left = 68.0
+offset_top = 48.0
+offset_right = 120.0
+offset_bottom = 71.0
+text = "Score: "
+script = ExtResource("1_1l0tm")
+
+[node name="Capturure" parent="." unique_id=82933649 instance=ExtResource("1_qxrlw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="BeatSpawner" parent="." unique_id=503372501 instance=ExtResource("6_i6g32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
