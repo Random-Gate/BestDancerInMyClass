@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://cn6erht3fbs08"]
 
 [ext_resource type="Script" uid="uid://4q0k2862wnyi" path="res://Scripts/capturure.gd" id="1_hl57f"]
+[ext_resource type="PackedScene" uid="uid://bymdl25d4ttxx" path="res://assets/capturure.glb" id="2_ql6g1"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_o6rqx"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hl57f"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ql6g1"]
+radius = 0.71045446
 
 [node name="Capturure" type="Area3D" unique_id=966583844]
 script = ExtResource("1_hl57f")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2024624347]
-mesh = SubResource("BoxMesh_o6rqx")
+
+[node name="capturure" parent="MeshInstance3D" unique_id=1335526156 instance=ExtResource("2_ql6g1")]
+transform = Transform3D(-0.0036956293, -0.02415106, -0.9997015, -0.9884939, 0.15126073, 0, 0.15121558, 0.9881989, -0.024432179, 0, 0, -0.10509175)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1799231975]
-shape = SubResource("BoxShape3D_hl57f")
+shape = SubResource("SphereShape3D_ql6g1")

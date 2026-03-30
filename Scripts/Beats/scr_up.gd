@@ -15,4 +15,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	position.x = position.x - moveSpeed * delta
 	
-	if overlaps_area(capturure): queue_free()
+	if overlaps_area(capturure) and Input.is_action_just_pressed("Up"):
+		queue_free()
+	
+	
+	
+	
